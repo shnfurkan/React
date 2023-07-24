@@ -1,0 +1,29 @@
+{
+    "family":[
+        { "id" :1,         
+         "content":"Aile herşeydir.", 
+         "title":"Osman",
+         "price":"Paha Biçilemez."
+    },
+    {    "id" :2,        
+         "content":"Aile herşeydir.", 
+         "title":"Fatma",
+         "price":"Paha Biçilemez."
+    },
+    {    "id" :3,       
+         "content":"Aile herşeydir.", 
+         "title":"Murat",
+         "price":"Paha Biçilemez."
+    },
+    {    "id" :4,        
+         "content":"Aile herşeydir.", 
+         "title":"Ahmet",
+         "price":"Paha Biçilemez."
+    },
+    {    "id" :5,       
+         "content":"Aile herşeydir.", 
+         "title":"Furkan",
+         "price":"Paha Biçilemez."
+    }
+    ]
+}

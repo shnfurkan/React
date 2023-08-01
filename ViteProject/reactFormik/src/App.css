@@ -1,0 +1,14 @@
+.saveButton {
+    background-color: bisque;
+    color: black;
+}
+
+.error {
+    color: red;
+}
+
+.input-error {
+    border-color: red;
+}
+
+

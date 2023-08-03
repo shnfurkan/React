@@ -1,5 +1,6 @@
 import { useFormik } from 'formik';
 import { basicSchema } from '../schemas';
+import {Link} from 'react-router-dom'
 
 function GeneralForm() {
 
@@ -78,8 +79,11 @@ function GeneralForm() {
         <button type='submit' className='saveButton' disabled={isSubmitting}>Kaydet</button>
             
         </form>
+        <br></br>
+        <Link to='/portal'>Portal'a Git!</Link>
 </div>
     );
 }
 
 export default GeneralForm;
+

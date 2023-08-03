@@ -36,3 +36,4 @@ export const advancedSchema = yup.object().shape({
     .oneOf([true],'Kullanim koşullarini kabul ediniz.'),
 })
 
+

@@ -1,32 +1,28 @@
-// npm init , npm install --save-dev lite-server
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
+// Önce bir index.html oluşturuyoruz. ! yapip kisayol ile devam ederiz. 
+// Bunu <script src="app.js"></script> body nin içine yazariz.
+// Terminale npm init yazariz.
+// Terminale npm install --save-dev lite-server yazariz.
+// Package.json içerisindeki scripts e "start":"lite-server" yazariz.
+// Terminale npm start yazariz
+// Güncellemelerdede farkli terminalde tsc app.ts -w yazariz.
+// Hata alırsak eğer npm install -g typescript cmd ye yazabiliriz.
 var Name = "furkan";
 var Soyad = "şahin";
-var Age = 22;
-var Change = true;
-console.log(Name);
 var add = "Adi: ".concat(Name, " ve Soyadi: ").concat(Soyad);
 console.log(add);
 var dizi = ["furkan", "şahin", "hey"];
-console.log(dizi);
 var dizi2 = ["furkan", "şahin", 5, 15, true];
-console.log(dizi2);
+console.log(dizi, dizi2);
 for (var i = 0; i < dizi.length; i++) {
     console.log(dizi[i]);
 }
+var Sayi = [10, 20, 30];
+for (var _i = 0, Sayi_1 = Sayi; _i < Sayi_1.length; _i++) {
+    var item = Sayi_1[_i];
+    console.log(item);
+}
 var tuple = [["frkn", 15], ["shn", 20]];
 console.log(tuple);
-console.log("--------------------------------------------");
 var char = {
     firstName: "Furkan",
     lastName: "Şahin",
@@ -39,8 +35,6 @@ console.log(changed);
 var herşeyOlabilir = 5;
 herşeyOlabilir = "şahin";
 console.log(herşeyOlabilir);
-var dizi3 = ["furkan", 3, 2, 1, true];
-console.log(dizi3);
 var x = 15;
 var y = 20;
 x > y ? console.log("x y den büyüktür.") : console.log("y x den büyüktür.");
@@ -65,15 +59,6 @@ switch (day) {
         console.log("Böyle bir gün yok.");
         break;
 }
-console.log("------------------------------------------------");
-for (var i = 0; i < 3; i++) {
-    console.log("İ değerim", i);
-}
-var Sayi = [10, 20, 30];
-for (var _i = 0, Sayi_1 = Sayi; _i < Sayi_1.length; _i++) {
-    var item = Sayi_1[_i];
-    console.log(item);
-}
 var furkann = 5;
 while (furkann < 10) {
     console.log(furkann);
@@ -85,13 +70,13 @@ var sahinn = 500;
 do {
     console.log(sahinn);
 } while (sahinn < 500);
-//function
+// Create a function
 function Add(a, b) {
     return a + b;
 }
 var newAdd = Add(5, 10);
 console.log(newAdd);
-//arrow function
+// Create an Arrow Function
 var Add1 = function (a, b) {
     return a + b;
 };
@@ -102,10 +87,13 @@ function birlestir(message) {
     for (var _i = 1; _i < arguments.length; _i++) {
         names[_i - 1] = arguments[_i];
     }
-    console.log(message + " " + names.join(", "));
+    console.log(message + " " + names.join(" , "));
 }
-birlestir("Merhaba", "Can", "Osman");
-console.log("------------------------------------------------");
+birlestir("Merhaba", "Can", "Eyüp");
+// Class Yapısı
+// Aşşağıdaki tanımladığım değerlerin önüne birşey koymasssam otamatik public olur ve heryerde kullanabiliriz.
+// Private koyarsam sadece o class da kullanabilirim.
+// Readonly koyarsam sadece o değeri esas alır aşşağıda yeni değer atarsan kabul etmez.
 var Sahin = /** @class */ (function () {
     function Sahin(newID, newFirstName, newLastName) {
         this.id = newID;
@@ -132,7 +120,6 @@ var person = {
     middleName: "--"
 };
 console.log(getFullName(person));
-console.log("---------------------------------------------");
 function Sahinnn(Sahinler) {
     return Sahinler.Change ? Sahinler.Name.toLocaleUpperCase() : Sahinler.Name.toLocaleLowerCase();
 }
@@ -161,17 +148,11 @@ function adds(a, b) {
     throw new Error("Lütfen doğru formatta data gönderin.");
 }
 console.log(adds("furkan", "sahin"));
-// class a da bidaha bakarsan daha iyi olabilir gibi.
-// Generics de istersen any koyarak yaparsın istersen <isim> olarak yaparsın sana kalmış any çok önerilmiyor.
+// Generics
+// İstersen any koyarak yaparsın, istersen <isim> olarak yaparsın.
 var diziler = [5, 3, 2, 1];
 function handleDiziler(items) {
     var randomIndex = Math.floor(Math.random() * items.length);
     return items[randomIndex];
 }
 console.log(handleDiziler(diziler));
-// ------
-function merge(obj1, obj2) {
-    return __assign(__assign({}, obj1), obj2);
-}
-console.log(merge({ name: "furkan" }, { age: 22 }));
-// npm start yap önce sonra cmd den devam.

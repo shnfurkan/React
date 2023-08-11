@@ -12,7 +12,7 @@ function LessonTextField() {
     return (  
         <Stack direction="row" spacing={4}>
             <TextField label="Ad" variant='outlined' value={value} onChange={handleChange}
-            helperText= {!value ? <p>Lütfen ad giriniz.</p> : <p>Lütfen adinizi gizli tutunuz.</p>}
+            helperText= {!value ? <><p>Lütfen ad giriniz.</p></> : <><p>Lütfen adinizi gizli tutunuz.</p></>}
             />
         </Stack>
     );

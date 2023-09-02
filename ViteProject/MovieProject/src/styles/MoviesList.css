@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.moviesList {
+    border-radius: 15px;
+    width: 350px;
+    height: 400px;
+    margin: 20px;
+    box-shadow: 0px 3px 15px rgb(45, 184, 79);
+    text-align: center;
+    color: white;
+  }
+  
+.moviesList:hover {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+  }
+
+.deleteMovie {
+    background-color: rgb(25, 83, 117);
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

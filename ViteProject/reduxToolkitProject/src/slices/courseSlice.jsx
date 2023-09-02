@@ -3,6 +3,7 @@ import { createSlice, nanoid } from '@reduxjs/toolkit'
 export const courseSlice = createSlice({
     name: 'course',
     initialState: {
+        searchTerm: "",
         data: []
     },
     reducers: {
@@ -19,10 +20,15 @@ export const courseSlice = createSlice({
             return task.id !== action.payload;
             })
         state.data = afterDeleting
-      } 
+      },
+      searching: (state,action) => {
+        state.searchTerm = action.payload
+      }
     },
 })
 
-export const {add,deleting} = courseSlice.actions
+export const {add,deleting,searching} = courseSlice.actions
 export default courseSlice.reducer
+
+
 

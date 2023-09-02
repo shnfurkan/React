@@ -2,7 +2,14 @@ import { useSelector,useDispatch } from 'react-redux'
 import {deleting} from "../slices/courseSlice"
 
 function CourseList() {
-    const datas = useSelector((state) => state.course.data)
+    
+    const {datas} = useSelector(({form,course:{data,searchTerm}}) => {
+        const filteredDatas = data.filter((course) => course.baslik.toLowerCase().includes(searchTerm.toLowerCase()))
+        return {
+            datas:filteredDatas,
+        }
+    })
+    
     const dispatch = useDispatch()
     
     return (  
@@ -27,3 +34,4 @@ function CourseList() {
     );
 }
 export default CourseList;
+

@@ -17,7 +17,7 @@ export const MovieSlice = createSlice({
         movieType: actions.payload.movieType,
         moviePoint: actions.payload.moviePoint,
         movieImage: actions.payload.movieImage,
-        id: nanoid(),
+        id: actions.payload.id,
       }
       state.movies.push(newMovie);
     },

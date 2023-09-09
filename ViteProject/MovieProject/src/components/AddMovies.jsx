@@ -5,6 +5,8 @@ import "../styles/AddMovies.css"
 import { useFormik } from 'formik';
 import { basicSchema } from '../schemas';
 import { useState } from 'react';
+import axios from "axios"
+import { nanoid } from '@reduxjs/toolkit'
 
 function AddMovies() {
 
@@ -50,9 +52,11 @@ function AddMovies() {
             movieYear: values.movieYear,
             moviePoint: values.moviePoint,
             movieImage: selectedFile,
+            id: nanoid(),
           };
 
         dispatch(addMovies(movieData));
+        axios.post('http://localhost:3000/data', movieData);
         formik.resetForm();
         }
 });
@@ -102,3 +106,4 @@ function AddMovies() {
 }
 
 export default AddMovies;
+

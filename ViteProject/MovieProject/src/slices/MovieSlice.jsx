@@ -2,7 +2,7 @@ import { createSlice, nanoid } from '@reduxjs/toolkit'
 
 const initialState = {
   movies: [],
-  searchMovies: "",
+  // searchMovies: "",
 }
 
 export const MovieSlice = createSlice({
@@ -27,13 +27,13 @@ export const MovieSlice = createSlice({
       })
       state.movies = deletedMovies;
     },
+    // searchChange: (state,actions) => {
+    //   state.searchMovies = actions.payload
+    // }
   },
 })
 
-
-export const {addMovies,deletingMovies} = MovieSlice.actions
+export const {addMovies,deletingMovies,searchChange} = MovieSlice.actions
 
 export default MovieSlice.reducer
-
-
 

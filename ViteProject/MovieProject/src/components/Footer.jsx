@@ -7,14 +7,14 @@ function Footer() {
     return ( 
         <>
         <div className='footer-icons'>
-            <a href='https://twitter.com/furkanshnn_'>
-            <TwitterIcon fontSize='large' color='success'/>
+            <a href='https://twitter.com/furkanshnn_' className='twitter-icon'>
+            <TwitterIcon fontSize='large'/>
             </a>
             <a href='https://www.instagram.com/furkanshnn_/' className='instagram-icon'>
-            <InstagramIcon fontSize='large' color='success'/>
+            <InstagramIcon fontSize='large'/>
             </a>
         </div>
-        <p className='text'>Bütün Hakları Saklıdır. | Furkan Şahin </p>
+        <p className='text'>All Rights Reserved. | Furkan Şahin </p>
         </>
     );
 }

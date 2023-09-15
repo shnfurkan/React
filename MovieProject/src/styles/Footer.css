@@ -1,0 +1,34 @@
+.footer-icons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    color: rgb(45, 184, 79);
+    margin: 0 10px;
+  }
+
+.instagram-icon {
+    margin-left: 10px;
+    color: #3d405b;
+}
+
+.twitter-icon {
+    color: #3d405b;
+}
+
+.text {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    color: #3d405b;
+    margin: 0 10px;
+}

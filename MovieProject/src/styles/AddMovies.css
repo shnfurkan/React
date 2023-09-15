@@ -1,0 +1,41 @@
+ .addMovies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+  }
+  form {
+    width: 500px;
+  }
+  form label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  input {
+    width: 100%;
+    padding: 8px 7px;
+    font-size: 16px;
+    border: 2px solid #81b29a;
+    background-color: #81b29a;
+    color: white;
+    margin: 5px 0px;
+    outline: none;
+    border-radius: 10px;
+  }
+  .buttonAddMovies {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 16px 0px;
+    background-color: #3d405b;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+  }
+  .erroring {
+    color: red;
+    font-weight: bold;
+  }
+

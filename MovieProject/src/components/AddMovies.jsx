@@ -1,34 +1,29 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { updatePhoto } from "../slices/FormSlice"
 import "../styles/AddMovies.css"
 import { useFormik } from 'formik';
 import { basicSchema } from '../schemas';
 import { useState } from 'react';
-import axios from "axios"
 import { nanoid } from '@reduxjs/toolkit'
+import { addedMoviesActions } from '../Api';
 
 function AddMovies() {
 
     const [selectedFile, setSelectedFile] = useState(null);
 
     const dispatch = useDispatch()
-    const {movieName,movieYear,movieType,moviePoint} = useSelector((state) => state.form)
+    const {movieName,movieYear,movieType,moviePoint,movieImage} = useSelector((state) => state.form)
 
     const formik = useFormik({
         initialValues: {
-          movieName: movieName,
-          movieType: movieType,
-          movieYear: movieYear,
-          moviePoint: moviePoint,
-          movieImage: null,
+          movieName,
+          movieType,
+          movieYear,
+          moviePoint,
+          movieImage,
         },
         validationSchema: basicSchema,
 
         onSubmit: (values) => {
-
-        if (selectedFile) {
-            dispatch(updatePhoto(selectedFile));
-        }
 
         const movieData = {
             movieName: values.movieName,
@@ -39,10 +34,7 @@ function AddMovies() {
             id: nanoid(),
           };
         
-        const submitMovieData = async (movieData) => {
-            const response = await axios.post('http://localhost:3000/data', movieData);
-        }
-        submitMovieData(movieData);
+        dispatch(addedMoviesActions(movieData));
         formik.resetForm();
         }
 });
@@ -75,7 +67,7 @@ function AddMovies() {
                 <label>Movie Image:</label>
 
                 <input  type="file" accept=".jpg, .jpeg, .png" 
-                onChange={(event) => {
+                    onChange={(event) => {
                     const file = event.currentTarget.files[0];
                     if (file) {
                     const reader = new FileReader();

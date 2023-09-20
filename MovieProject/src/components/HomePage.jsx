@@ -1,13 +1,12 @@
 import { useNavigate } from "react-router-dom"
 import "../styles/Homepage.css"
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useState } from "react";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 function HomePage() {
     const navigate = useNavigate();
-    const dispatch = useDispatch();
 
     const moviesImages = useSelector((state) => state.movie.movies)
 
@@ -47,3 +46,4 @@ function HomePage() {
 }
 
 export default HomePage;
+

@@ -6,24 +6,17 @@ import AddMovies from "./components/AddMovies"
 import MoviesList from "./components/MoviesList"
 import AboutUs from "./components/AboutUs"
 import Footer from "./components/Footer"
-import axios from "axios"
-import { useSelector, useDispatch } from 'react-redux'
-import { addMovies } from "../src/slices/MovieSlice"
+import { useDispatch } from 'react-redux'
 import { useEffect } from "react"
-
+import { gettedMoviesActions } from "./Api"
 
 function App() {
-
-  const moviesData = useSelector((state) => state.movie.movies)
+  
   const dispatch = useDispatch()
 
-  const fetchTasks = async () => {
-    const response = await axios.get('http://localhost:3000/data');
-    dispatch(addMovies(response.data));
-    }
     useEffect(() => {
-    fetchTasks();
-    },[moviesData]);
+      dispatch(gettedMoviesActions());
+    },[]);
 
   return (
    <div>

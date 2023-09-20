@@ -1,10 +1,10 @@
 import { useSelector,useDispatch } from 'react-redux'
 import Rating from '@mui/material/Rating';
 import "../styles/MoviesList.css"
-import {deletingMovies,searchChange} from "../slices/MovieSlice"
+import {searchChange} from "../slices/MovieSlice"
 import { useEffect,useState } from 'react';
-import axios from "axios";
 import "../App.css"
+import { deletedMoviesActions } from '../Api';
 
 function MoviesList() {
     const dispatch = useDispatch()
@@ -20,6 +20,10 @@ function MoviesList() {
           setFilteredTasks(movies);
         }
       }, [searchMovies, movies])
+
+      const handleDelete = (id) => {
+        dispatch(deletedMoviesActions(id));
+      }
 
     return (
         <>
@@ -43,13 +47,7 @@ function MoviesList() {
                             {value.movieYear}
                             <h3>Movie Point:</h3>
                             <Rating name="customized-10" defaultValue={parseInt(value.moviePoint)} max={10}/>
-                        <button className='deleteMovie' onClick={ async () =>
-                        {
-                                await axios.delete(`http://localhost:3000/data/${value.id}`)
-                                dispatch(deletingMovies(value.id));
-                        }
-                    }
-                        >Delete a Movie</button>
+                            <button className='deleteMovie' onClick={ () => handleDelete(value.id)}>Delete a Movie</button>
                         </div>
                     )
                 })

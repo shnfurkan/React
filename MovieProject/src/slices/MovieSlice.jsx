@@ -1,4 +1,4 @@
-import { createSlice, nanoid } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   movies: [],
@@ -8,8 +8,11 @@ export const MovieSlice = createSlice({
   name: 'movie',
   initialState,
   reducers: {
-    addMovies: (state,actions) => {
+    getMovies: (state,actions) => {
       state.movies = actions.payload;
+    },
+    addMovies: (state,actions) => {
+      state.movies.push(actions.payload);
     },
     deletingMovies: (state,actions) => {
       const deletedMovies = state.movies.filter((value)=> {
@@ -23,7 +26,9 @@ export const MovieSlice = createSlice({
   },
 })
 
-export const {addMovies,deletingMovies,searchChange} = MovieSlice.actions
+export const {addMovies,deletingMovies,searchChange,getMovies} = MovieSlice.actions
 
 export default MovieSlice.reducer
+
+
 

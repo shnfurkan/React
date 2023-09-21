@@ -1,0 +1,50 @@
+{
+  "menu": [
+    {
+      "id": "campaigns1",
+      "title": "2 Medium Pizza + 2 Algida + Pepsi ",
+      "description": "2 Medium Pizza + 2 Algida Maraş Cup + Pepsi (1L)",
+      "img": "./src/images/campaigns/2-orta-boy-pizza-2-algida-maras-cup-pepsi-1l.jpg",
+      "price": 20,
+      "quantity": 0,
+      "category": "campaigns"
+    },
+    {
+      "id": "campaigns2",
+      "title": "Large Pizza + Çokomania + Pepsi",
+      "description": "(The trend is valid for pizzas. There is a price difference when changing the category.)",
+      "img": "./src/images/campaigns/buyuk-boy-pizza-cokomania-1-lt-pepsi.jpg",
+      "price": 17,
+      "quantity": 0,
+      "category": "campaigns"
+    },
+    {
+      "id": "campaigns3",
+      "title": "Large Pizza + Pepsi + 2 Cartedor",
+      "description": "(The price is valid for Trend pizzas. There is a price difference when the category is changed.)",
+      "img": "./src/images/campaigns/buyuk-pizza-1-lt-icecek-2-cartedor.jpg",
+      "price": 15,
+      "quantity": 0,
+      "category": "campaigns"
+    },
+    {
+      "id": "campaigns4",
+      "title": "Small Pizza + Fries + Pet Drink",
+      "description": "(The trend is valid for pizzas. There is a price difference when changing the category.)",
+      "img": "./src/images/campaigns/kucuk-boy-pizza-patates-pepsi.jpg",
+      "price": 12,
+      "quantity": 0,
+      "category": "campaigns"
+    },
+    {
+      "id": "campaigns5",
+      "title": "MyBox + Bombe",
+      "description": "Rectangular Pizza + Mini Chicken + Serrated Baked Potato + Bombe + Ketchup + Mayonnaise . ",
+      "img": "./src/images/campaigns/mybox-bombe.jpg",
+      "price": 25,
+      "quantity": 0,
+      "category": "campaigns"
+    }
+  ],
+  "cart": []
+}

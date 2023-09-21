@@ -1,0 +1,124 @@
+/* Pizza kartı */
+.pizza-card {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+  
+  /* Pizza resmi */
+.pizza-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+  
+  /* Pizza detayları */
+.pizza-details {
+    flex-grow: 1;
+}
+  
+  /* Pizza başlığı */
+.pizza-title {
+    font-size: 20px;
+    margin: 0;
+}
+  
+  /* Pizza açıklaması */
+.pizza-description {
+    font-size: 14px;
+    margin: 5px 0;
+}
+  
+  /* Pizza fiyatı */
+.pizza-price {
+    font-size: 16px;
+    font-weight: bold;
+}
+  
+  /* Miktar kontrol düğmeleri */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+  
+  /* Miktar düğmeleri */
+.quantity-controls button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+  
+  /* Miktar metni */
+.pizza-quantity {
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+
+
+/* Sepet */
+.Cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  /* Sepet öğesi */
+  .cart-item {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 300px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+  }
+  
+  /* Ürün resmi */
+  .cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  /* Ürün detayları */
+  .cart-item-details {
+    flex-grow: 1;
+  }
+  
+  /* Ürün başlığı */
+  .cart-item-title {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  /* Ürün açıklaması */
+  .cart-item-description {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  /* Ürün fiyatı */
+  .cart-item-price {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Ürün miktarı */
+  .cart-item-quantity {
+    font-size: 16px;
+    margin: 0;
+  }
+

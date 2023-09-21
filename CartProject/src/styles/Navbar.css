@@ -1,0 +1,31 @@
+.Navbar-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+  
+.icon {
+    margin-left: 10px;
+    width: 250px;
+}
+  
+.Navbar {
+    text-align: center;
+    flex-grow: 1;
+}
+  
+.nav-link {
+    display: inline-block;
+    margin: 0 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+  
+.nav-link:hover {
+    color: orange;
+}
+

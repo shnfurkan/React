@@ -69,7 +69,6 @@
 .Cart {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin: 20px;
   }
   
@@ -122,3 +121,15 @@
     margin: 0;
   }
 
+  .clearCartButton {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(145, 54, 54);
+    color: white;
+    width: 10vw;
+    height: 2vw;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    margin-left: 10%;
+    cursor: pointer;
+}

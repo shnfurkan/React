@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux'
-import { addedCartActions, changeCartActions, changePizzasActions, deleteCartActions} from "../Api";
+import { addedCartActions, changeCartActions, changePizzasActions, clearCartActions, deleteCartActions} from "../Api";
 import "../styles/Menu.css"
 
 function Menu() {
@@ -51,6 +51,9 @@ function Menu() {
         category:category,
     };
 
+    // const newPizzaDatas = {...pizzas, quantity:newQuantity}; (eğer handleIncreasing e direk pizzas ı yollarsak böylede yazabiliriz.)
+    // bunun nedeni olduğu gibi gelenler kalsın yanındaki neyi değiştirmek istiyorsan değiştir demek.
+
     dispatch(changePizzasActions(newPizzaDatas,id));
 
     const inCart = carts.some((item)=>item.id === id);
@@ -61,6 +64,11 @@ function Menu() {
         dispatch(addedCartActions(newPizzaDatas));
     }
 
+    }
+
+    const handleClearCart = (event) => {
+      event.preventDefault();
+      dispatch(clearCartActions(carts,datas));
     }
 
     return (  
@@ -102,7 +110,7 @@ function Menu() {
     );
   })}
 </div>
-            
+  {carts.length > 0 && <button className="clearCartButton" onClick={handleClearCart}>CLEAR CART</button>}      
         </div>
     );
 }

@@ -25,7 +25,6 @@ export const MenuSlice = createSlice({
         }
         return menu;
       });
-
       state.datas = updatedMenus;
     },
     getCart: (state,actions) => {
@@ -54,11 +53,27 @@ export const MenuSlice = createSlice({
         return value.id !== actions.payload
       })
       state.carts = deletedMovies;
+    },
+    clearCarts: (state,actions) => {
+      state.carts = [];
+    },
+    clearDatas: (state,actions) => {
+      const updatedMenus = state.datas.map((menu) => {
+        if (menu.id === actions.payload.id) {
+          return {
+            ...menu,
+            quantity: 0,
+          };
+        }
+        return menu;
+      });
+      state.datas = updatedMenus;
     }
   },
 })
 
-export const { getMenus,changePizzasQuantity,getCart,changeCartQuantity,addedCarts,deletedCarts } = MenuSlice.actions
+export const { getMenus,changePizzasQuantity,getCart,changeCartQuantity,addedCarts,deletedCarts,clearCarts,clearDatas } = MenuSlice.actions
 
 export default MenuSlice.reducer
+
 

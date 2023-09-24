@@ -29,3 +29,9 @@
     color: orange;
 }
 
+.iconButton {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+

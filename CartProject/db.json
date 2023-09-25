@@ -42,7 +42,7 @@
       "description": "Rectangular Pizza + Mini Chicken + Serrated Baked Potato + Bombe + Ketchup + Mayonnaise . ",
       "img": "./src/images/campaigns/mybox-bombe.jpg",
       "price": 25,
-      "quantity": 0,
+      "quantity": 3,
       "category": "campaigns"
     }
   ],

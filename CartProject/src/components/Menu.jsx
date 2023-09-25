@@ -23,16 +23,18 @@ function Menu() {
                 category:category,
             };
 
-            dispatch(changePizzasActions(newPizzaDatas,id));
-            const inCart = carts.some((item)=>item.id === id);
+            dispatch(changePizzasActions(newPizzaDatas,id)).then(res => {
+              
+              const inCart = carts.some((item)=>item.id === id);
             
-            if(inCart) {
-                dispatch(changeCartActions(newPizzaDatas,id));
-            }
-
-            if(newQuantity===0) {
-                dispatch(deleteCartActions(id));
-            }
+              if(inCart) {
+                  dispatch(changeCartActions(newPizzaDatas,id));
+              }
+  
+              if(newQuantity===0) {
+                  dispatch(deleteCartActions(id));
+              }
+            })
         }
     }
 
@@ -54,7 +56,7 @@ function Menu() {
     // const newPizzaDatas = {...pizzas, quantity:newQuantity}; (eğer handleIncreasing e direk pizzas ı yollarsak böylede yazabiliriz.)
     // bunun nedeni olduğu gibi gelenler kalsın yanındaki neyi değiştirmek istiyorsan değiştir demek.
 
-    dispatch(changePizzasActions(newPizzaDatas,id));
+    dispatch(changePizzasActions(newPizzaDatas,id)).then(res => {
 
     const inCart = carts.some((item)=>item.id === id);
 
@@ -63,6 +65,8 @@ function Menu() {
     } else {
         dispatch(addedCartActions(newPizzaDatas));
     }
+
+    })
 
     }
 
@@ -116,4 +120,5 @@ function Menu() {
 }
 
 export default Menu;
+
 

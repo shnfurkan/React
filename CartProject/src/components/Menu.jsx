@@ -34,7 +34,7 @@ function Menu() {
               if(newQuantity===0) {
                   dispatch(deleteCartActions(id));
               }
-            })
+            }).catch(rej => console.log(rej,34));
         }
     }
 
@@ -66,7 +66,7 @@ function Menu() {
         dispatch(addedCartActions(newPizzaDatas));
     }
 
-    })
+    }).catch(rej => console.log(rej,35));
 
     }
 

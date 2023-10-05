@@ -2,10 +2,12 @@ import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux'
 import { addedCartActions, changeCartActions, changePizzasActions, clearCartActions, deleteCartActions} from "../Api";
 import "../styles/Menu.css"
+import { useNavigate } from "react-router-dom";
 
 function Menu() {
     const dispatch = useDispatch()
     const {datas,carts} = useSelector((state) => state.menu)
+    const navigate = useNavigate();
 
     const handleDecreasing = (event,id,title,description,img,price,quantity,category) => {
         event.preventDefault();
@@ -62,6 +64,7 @@ function Menu() {
 
     if(inCart) {
         dispatch(changeCartActions(newPizzaDatas,id));
+
     } else {
         dispatch(addedCartActions(newPizzaDatas));
     }
@@ -114,7 +117,7 @@ function Menu() {
     );
   })}
 </div>
-  {carts.length > 0 && <button className="clearCartButton" onClick={handleClearCart}>CLEAR CART</button>}      
+  {carts.length > 0 && <><button className="CartButton" onClick={handleClearCart}>CLEAR CART</button> <button className="CartButton" onClick={()=> navigate("/cartList")}>GO TO CART</button></>}
         </div>
     );
 }

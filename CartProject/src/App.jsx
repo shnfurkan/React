@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import { useEffect } from "react"
 import { useDispatch } from 'react-redux'
 import { gettedPizzasActions, gettedCartActions } from "./Api"
+import CartList from "./components/cartList"
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage/>}/>
       <Route path="/menu" element={<Menu/>}/>
+      <Route path="/cartList" element={<CartList/>}/>
     </Routes>
 
     </div>
@@ -28,4 +30,5 @@ function App() {
 }
 
 export default App
+
 

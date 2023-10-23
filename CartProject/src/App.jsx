@@ -14,6 +14,7 @@ function App() {
   useEffect(() => {
     dispatch(gettedPizzasActions());
     dispatch(gettedCartActions());
+    debugger;
   },[]);
 
   return (

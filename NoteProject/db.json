@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 892,
+      "username": "Emirhan34",
+      "password": "Emirhan34??"
+    },
+    {
+      "id": 924,
+      "username": "deneme123",
+      "password": "deneme123"
+    }
+  ],
+  "notes": [
+    {
+      "Title": "Spor",
+      "Text": "Spor yapmak önemlidir.",
+      "Category": "Egzersiz",
+      "id": 1
+    },
+    {
+      "Title": "Oyun Oynamak",
+      "Text": "Oyun oynamak önemlidir.",
+      "Category": "Eğlence",
+      "id": 2
+    },
+    {
+      "Title": "Sinema",
+      "Text": "Atatürk filmini kesinlikle izlemelisiniz..!",
+      "Category": "Sosyalleşme",
+      "id": 3
+    },
+    {
+      "Title": "Ders Çalışmak",
+      "Text": "Ders çalışmak ilerde size başarı getirir.",
+      "Category": "Rutin",
+      "id": 4
+    }
+  ]
+}

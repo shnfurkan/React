@@ -27,7 +27,7 @@ class Notification extends React.Component {
         NotificationManager.warning(message,title,time,callback);
         break;
       case 'error':
-        NotificationManager.error(message, 'Click me!', 5000, () => { // örnek olarak bıraktım
+        NotificationManager.error(message, 'Click me!', 5000, () => {
           alert('callback');
         });
         break;

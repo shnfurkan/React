@@ -2,8 +2,8 @@
   "users": [
     {
       "id": 892,
-      "username": "Emirhan34",
-      "password": "Emirhan34??"
+      "username": "Furkan34",
+      "password": "Furkan34??"
     }
   ],
   "notes": [
@@ -18,12 +18,6 @@
       "Text": "Oyun oynamak önemlidir.",
       "Category": "Eğlence",
       "id": 2
-    },
-    {
-      "Title": "Sinema",
-      "Text": "Atatürk filmini kesinlikle izlemelisiniz..!",
-      "Category": "Sosyalleşme",
-      "id": 3
     }
   ]
 }

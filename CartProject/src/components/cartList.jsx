@@ -1,8 +1,15 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import "../styles/cartList.css"
+import { gettedCartActions, gettedPizzasActions } from "../Api";
 
 function cartList() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(gettedPizzasActions());
+    dispatch(gettedCartActions());
+  },[]);
 
     const {carts} = useSelector((state) => state.menu)
     const [totelPrice, setTotelPrice] = useState(0)

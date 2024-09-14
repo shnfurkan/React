@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux'
-import { addedCartActions, changeCartActions, changePizzasActions, clearCartActions, deleteCartActions} from "../Api";
+import { addedCartActions, changeCartActions, changePizzasActions, clearCartActions, deleteCartActions, gettedCartActions, gettedPizzasActions} from "../Api";
 import "../styles/Menu.css"
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function Menu() {
     const dispatch = useDispatch()
@@ -77,6 +78,11 @@ function Menu() {
       event.preventDefault();
       dispatch(clearCartActions(carts,datas));
     }
+
+    useEffect(() => {
+      dispatch(gettedPizzasActions());
+      dispatch(gettedCartActions());
+    },[]);
 
     return (  
         <div>
